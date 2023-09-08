@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'another_danger';
+    src: url('./Fonts/another_danger/Another\ Danger\ -\ Demo.otf') format('truetype');
+    /* Add additional font properties if needed */
+  }
+  @font-face {
+    font-family: 'bloody';
+    src: url('./Fonts/bloody/BLOODY.TTF') format('truetype');
+    /* Add additional font properties if needed */
+  }
+  @font-face {
+    font-family: 'kings_butcher';
+    src: url("./Fonts/kings_butcher/KingsButcher-Regular.otf") format('truetype');
+    /* Add additional font properties if needed */
+  }
+  @font-face {
+    font-family: 'sectar';
+    src: url('./Fonts/sectar/Sectar_SP.otf') format('truetype');
+    /* Add additional font properties if needed */
+  }
+  @font-face {
+    font-family: 'dark_halloween';
+    src: url('./Fonts/dark_halloween/DarkHalloween.otf') format('truetype');
+    /* Add additional font properties if needed */
+  }
+  @font-face {
+    font-family: 'fiendish';
+    src: url('./Fonts/fiendish/Fiendish.ttf') format('truetype');
+    /* Add additional font properties if needed */
+  }
+  @font-face {
+    font-family: 'buried-before';
+    src: url('./Fonts/buried-before/BuriedBeforeBB_Reg.otf') format('truetype');
+    /* Add additional font properties if needed */
+  }
+  @font-face {
+    font-family: 'cenobyte';
+    src: url('./Fonts/cenobyte/deathrattle-bb/deathrattlebb_reg.ttf') format('truetype');
+  }
+ 
+  
+  @font-face {
+    font-family: 'deadbitch';
+    src: url('./Fonts/deadbitch/DeadBitch-Regular.otf') format('truetype');
+  }
+  
+  @font-face {     
+    font-family: 'just-die-already';
+    src: url('./Fonts/just-die-already/JustDieAlready.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'living-by-numbers';
+    src: url('./Fonts/living-by-numbers/Living\ by\ Numbers.otf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'my';
+    src: url('./Fonts/my/MYBLS___.TTF') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'spiders';
+    src: url('./Fonts/spiders/Spiders.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'vampire-bites';
+    src:
+     url('./Fonts/vampire-bite/Vampire\ Bite.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'dogica-bold';
+    src:
+     url('./Fonts/dogica/TTF/dogicabold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'dogica-normal';
+    src:
+     url('./Fonts/dogica/TTF/dogicapixel.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'dogica-lite';
+    src:
+     url('./Fonts/dogica/TTF/dogica.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Ghost';
+    src:
+     url('./Fonts/Ghost\ House.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Hell';
+    src:
+     url('./Fonts/Hell\ Bar.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Lic';
+    src:
+     url('./Fonts/LICENSE\ REQUEST.txt') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Readme';
+    src:
+     url('./Fonts/Readme\ Free.txt') format('truetype');
+  }
+
+
+
+  /* Used Fonts */
+  /*  
+  1.another_danger
+  2.bloody
+  3.kings_butcher
+  4.sectar
+  5.dark_halloween
+  6.fiendish
+  7.buried-before
+  8.cenobyte
+  9.deadbitch
+  10.hareback-attraction
+  11.just-die-already
+  12.living-by-numbers
+  13.my
+  14.spiders
+  15.vampire-bites
+  16.Ghost
+  17.
+  18.
+  19.
+  20.
+
+  */
