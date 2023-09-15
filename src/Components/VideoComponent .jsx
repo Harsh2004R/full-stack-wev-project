@@ -87,8 +87,8 @@ const VideoComponent = () => {
   }, []);
 
   return (
-    <Box pb="20px" display="flex" mt="20px" flexDirection={{base:"column",md:"row"}} justifyContent={"space-evenly"} w="100%" h={{base:"45vh",md:"auto"}} >
-      <Box border="2px solid red"  mt="20px" w={{base:"100%",md:"50%"}} borderRadius={"8px"} h={{base:"30vh",md:"48vh"}} >
+    <Box pb={{base:"10px",md:"20px"}} display="flex" mt={{base:"10px",md:"20px"}} flexDirection={{base:"column",md:"row"}} justifyContent={"space-evenly"} w="100%" h={{base:"45vh",md:"auto"}} >
+      <Box border="2px solid red"  mt={{base:"10px",md:"20px"}} w={{base:"100%",md:"50%"}} borderRadius={"8px"} h={{base:"30vh",md:"48vh"}} >
         <iframe
           width={"100%"}
           height="100%"

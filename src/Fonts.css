@@ -20,7 +20,7 @@
   }
   @font-face {
     font-family: 'dark_halloween';
-    src: url('./Fonts/dark_halloween/DarkHalloween.otf') format('truetype');
+    src: url('./Fonts/dark_halloween/DarkHalloween.otf') format('opentype');
     /* Add additional font properties if needed */
   }
   @font-face {
@@ -111,7 +111,21 @@
     src:
      url('./Fonts/Readme\ Free.txt') format('truetype');
   }
-
+  @font-face {
+    font-family: 'bebas_neue';
+    src:
+     url('./Fonts/bebas_neue/BebasNeue-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'caslon-antique';
+    src:
+     url('./Fonts/caslon-antique/CaslonAntique.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'quantify';
+    src:
+     url('./Fonts/quantify/Quantify.ttf') format('truetype');
+  }
 
 
   /* Used Fonts */

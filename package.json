@@ -2,7 +2,8 @@
   "name": "full-stack-wev-project",
   "version": "0.1.0",
   "private": true,
-  "dependencies":{
+  "dependencies": {
+    "@ajna/pagination": "^1.4.19",
     "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/react": "^2.7.1",
     "@emotion/react": "^11.11.1",
@@ -12,6 +13,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.0",
     "framer-motion": "^10.12.21",
     "gsap": "^3.12.2",
     "react": "^18.2.0",

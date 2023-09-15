@@ -1,5 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import LoginBG3 from '../Photo/LoginBG3.jpg';
 import asur from '../autoAudio/asur.mp3';
 import song1 from '../autoAudio/song1.mp3';
@@ -18,6 +20,12 @@ const glowAnimation = keyframes`
 function Login() {
 
   const songs = [asur, song1, song3, song4, song5, song6];
+
+  // login hooks here....
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+  let url = "https://reqres.in/api/login";
+
   const [audio, setAudio] = useState(null);
   const Navigate=useNavigate();
   useEffect(() => {
@@ -31,8 +39,20 @@ function Login() {
   }, [audio, songs]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     // Handle login logic here
+    e.preventDefault();
+
+    let obj = { email, password };
+    axios
+      .post(url, obj)
+      .then((res) => {
+        console.log(res);
+        let token = res.data.token;
+        localStorage.setItem("token", token);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   const handleHomePage =()=>{
     Navigate("/deathdate")
@@ -110,7 +130,8 @@ function Login() {
                   mx="auto"
                   type="text"
                   border="none"
-                  fontFamily="another_danger"
+                  fontFamily=""
+                  onChange={(e) => setemail(e.target.value)}
                 />
               </FormControl>
               <FormControl p="0.625rem">
@@ -128,19 +149,20 @@ function Login() {
                   bg="none"
                   mx="auto"
                   type="text"
-                  fontFamily="another_danger"
+                  fontFamily=""
+                  onChange={(e) => setpassword(e.target.value)}
                 />
               </FormControl>
               <Box mt="0.625rem"> 
                 <Button
-                  onClick={handleHomePage}
+                  onClick={handleSubmit}
                   _hover={{ boxShadow: '0 0 0.625rem 0.3125rem #FF0000' }} 
                   animation={`${glowAnimation} 1s infinite`}
                   _focus={{ outline: 'none' }}
                   _active={{ transform: 'scale(1.5)' }}
                   display="flex" alignItems="center" m="auto" type="submit" bgColor="transparent" borderRadius="md" w="50%" // Converted to rem
                 >
-                  <Text fontFamily="another_danger" color="#FF7043">Ready!</Text>
+                  <Text fontFamily="another_danger" color="#FF7043">Enter!</Text>
                 </Button>
               </Box>
             </form>

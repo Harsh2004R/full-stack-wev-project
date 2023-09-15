@@ -1,16 +1,23 @@
+
 import React from 'react'
-
-import {Box} from "@chakra-ui/react";
-
-
-const gradient1 = `linear-gradient(to right, #000000, #37474F, #000000)`;
+import ScareOnClip from '../Components/ScareOnClip';
+import {Box,Image,Button,Text,} from "@chakra-ui/react"
 function ScareOn() {
   return (
-    <>
-    <Box bg={gradient1} w="100%" h="100vh"></Box>
-    
-    
-    </>
+    <div>
+      
+
+      <Box 
+      w='100%'
+      h='100vh'
+      bg='#000000'
+      >
+
+      <ScareOnClip/>
+
+      </Box>
+      
+    </div>
   )
 }
 
