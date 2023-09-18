@@ -36,8 +36,7 @@ function AllRoutes() {
         <Route path="/scareon" element={<ScareOn/>}></Route>
         <Route path="/videos" element={<Videos/>}></Route>
         <Route path="/podcast" element={<Podcast/>}></Route>
-        <Route path="/scare_on_admin" element={<Podcast/>}></Route>
-        
+        <Route path="/scare_on_admin" element={<ScareOnAdmin/>}></Route>
       </Routes>
     </>
   )

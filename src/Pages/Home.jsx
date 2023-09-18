@@ -568,8 +568,7 @@ useEffect(() => {
          </Box>
 
           </Box>
-          {/* new comment add for  */}
-{/* commit */}
+         
 
 
           {/* Podcast audio payer part startinbg here -------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/}
@@ -614,7 +613,7 @@ useEffect(() => {
       Start exploring now!</Text>
     </Box>
         
-        <Box w={{ base: '92%', md: '60%' }} m="auto">
+        <Box w={{ base: '92%', md: '60%' }} h="auto" m="auto">
         <Image 
         _hover={{ boxShadow: '0 0 10px #B0BEC5' }}
          src={AudioPlayerIMG}  onClick={handlePodcastPage} alt="error" w="100%" h="auto"/>

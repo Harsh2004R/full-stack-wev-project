@@ -355,7 +355,8 @@
 
 
 
-
+import Navbar from "../Components/Navbar";
+import Navbar2 from "../Components/Navbar2";
 import React, { useState,useEffect } from 'react';
 import {
   IconButton,
@@ -387,12 +388,11 @@ import {
   FiMenu,
   FiBell,
   FiChevronDown,
-  FiArrowRight,
-  FiArrowLeft,
 
 } from 'react-icons/fi';
 
 import VideoComponent from '../Components/VideoComponent ';
+
 import {
   Grid,
   Center,
@@ -493,6 +493,14 @@ const SidebarContent = ({ onClose, ...rest }) => {
   const valueText = `${sliderValue}%`;
 
   return (
+
+
+    <>
+
+        
+        
+        
+
     <Box
       transition="3s ease"
       bg={useColorModeValue('#212121', 'white.900')}
@@ -694,7 +702,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
     </Box>
 
 
-
+    </>
   );
 };
 
@@ -825,6 +833,13 @@ const Videos = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
+
+
+    <>
+    
+    
+    
+
     <Box minH="100vh"   bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent onClose={() => onClose} display={{ base: 'none', md: 'block' }} />
       <Drawer
@@ -855,7 +870,7 @@ const Videos = () => {
           {/* Content */}
 
 
-
+         
           <VideoComponent/>
           <VideoComponent/>
           <VideoComponent/>
@@ -901,6 +916,8 @@ const Videos = () => {
 
       </Box>
     </Box>
+
+    </>
   );
 };
 

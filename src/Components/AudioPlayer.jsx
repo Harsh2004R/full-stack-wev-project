@@ -32,7 +32,6 @@ import {
 } from "@ajna/pagination";
 
 
-import MusicBg from "../Photo/MusicBg.png";
  
 
 import mix7 from "../autoAudio/mix7.wav";
@@ -86,7 +85,7 @@ const phoneBGs = [
     alt: 'Phone Image 2',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2016/02/05/13/11/fairy-tale-1180921_640.png',
+    url: 'https://images.unsplash.com/photo-1504903271097-d7e7c7f5f7ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGFya3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 3',
   },
   {
@@ -106,7 +105,7 @@ const phoneBGs = [
     alt: 'PC Image 7',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2015/03/08/17/25/musician-664432_640.jpg',
+    url: 'https://images.unsplash.com/photo-1600497900863-2dfbeedb06a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWMlMjBwbGF5ZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 8',
   },
   {
@@ -114,9 +113,12 @@ const phoneBGs = [
     alt: 'PC Image 9',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2016/07/16/07/10/music-1521116_1280.png',
+    url: 'https://images.unsplash.com/photo-1627389955646-6596047473d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGlsbHVzaW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 10',
   },
+  
+  
+  
   
 ];
 
@@ -126,41 +128,42 @@ const pcBGs = [
     alt: 'PC Image 1',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2018/08/27/10/11/radio-cassette-3634616_640.png',
+    url: 'https://plus.unsplash.com/premium_photo-1664195074951-fe91ec456eed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9kY2FzdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 2',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2016/02/05/13/11/fairy-tale-1180921_640.png',
+    url: 'https://images.unsplash.com/photo-1663775635512-c60be8b302b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bmV0ZmxpeCUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 3',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2016/04/19/05/07/turntable-1337986_640.jpg',
+    url: 'https://images.unsplash.com/photo-1663847709955-a2f171c7b54b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmV0ZmxpeCUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 4',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2016/07/16/07/10/music-1521116_1280.png',
+    url: 'https://images.unsplash.com/photo-1590602846989-e99596d2a6ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBvZGNhc3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 5',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2015/03/08/17/25/musician-664432_640.jpg',
+    url: 'https://images.unsplash.com/photo-1663568714479-9cccbd410076?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEyfHxob3Jyb3IlMjBzdG9yeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 6',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2017/03/19/18/39/turntable-2157300_640.jpg',
+    url: 'https://images.unsplash.com/photo-1686285961779-5070bdb03036?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQ2fHxob3Jyb3IlMjBzdG9yeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 7',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2017/03/09/20/53/microphone-2130806_640.jpg',
+    url: 'https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTcxfHxob3Jyb3IlMjBzdG9yeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 8',
   },
   {
-    url: 'https://cdn.pixabay.com/photo/2017/11/15/09/28/music-player-2951399_640.jpg',
+    url: 'https://images.unsplash.com/photo-1617743220812-6522d771846c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGVhcnBob25lc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 9',
   },
   {
-    url: 'https://images.unsplash.com/photo-1476136236990-838240be4859?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTF8fGJhbm5lciUyMG11c2ljfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    url: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmV0ZmxpeCUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
     alt: 'PC Image 10',
   },
+  
  
 ];
 
@@ -311,10 +314,7 @@ const AudioPlayer = () => {
   const handleChangeBG = () => {
     setPhoneBGIndex((prevIndex) => (prevIndex + 1) % phoneBGs.length);
     setPcBGIndex((prevIndex) => (prevIndex + 1) % pcBGs.length);
-    setPhoneBGIndex((prevIndex) => (prevIndex + 1) % phoneBGs.length);
-    setPcBGIndex((prevIndex) => (prevIndex + 1) % pcBGs.length);
-
-    setClickCount((prevCount) => (prevCount % 10) + 1);
+    setClickCount((prevCount) => (prevCount % phoneBGs.length) + 1);
   };
   const phoneBG = phoneBGs[phoneBGIndex].url;
   const pcBG = pcBGs[pcBGIndex].url;
@@ -354,7 +354,7 @@ const AudioPlayer = () => {
             color="#FF0000"
             h={{ base: "20px", md: "40px" }}
             bg="transparent"
-            _hover={{ boxShadow: '0 0 0.625rem 0.3125rem #FF0000' }}
+            _hover={{ boxShadow: '0 0 0.625rem 0.3125rem #FF0000'}}
           />
           <Slider
             value={currentTime}
@@ -378,6 +378,7 @@ const AudioPlayer = () => {
             colorScheme="gray"
             variant="outline"
             border={{base:"none",md:"0.5px solid #FFFFFF"}}
+            _hover={{ boxShadow: '0 0 0.625rem 0.3125rem #FF0000',color:"#FFFFFF" }}
             m={{ base: '0%', md: '3%' }}
             w={{ base: "15%", md: "5.6%" }}  height={{ base: "6vh", md: "6vh" }}
             borderRadius={"50%"}
@@ -391,6 +392,7 @@ const AudioPlayer = () => {
             colorScheme="gray"
             variant="outline"
             border={{base:"none",md:"0.5px solid #FFFFFF"}}
+            _hover={{ boxShadow: '0 0 0.625rem 0.3125rem #FF0000',color:"#FFFFFF" }}
             m={{ base: '0%', md: '3%' }}
             w={{ base: "15%", md: "5.6%" }}  height={{ base: "6vh", md: "6vh" }}
             borderRadius={"50%"}
@@ -423,7 +425,7 @@ const AudioPlayer = () => {
          >
           <Button  onClick={handleChangeBG}  color="#FF0000" bg="transparent" border="0.5px solid red" _hover={{ boxShadow: '0 0 0.625rem 0.3125rem #FF0000' ,transform: 'scale(0.9)'  }}  w={{base:"20%",md:"10%"}} h="3vh" fontSize={{base:"12px",md:"13px"}} >
             Change UI
-          </Button> <Text pt="10px" color="#FFFFFF" fontSize={"14px"}>UI :- <span style={{color:"#FF0000", fontSize:"14px" , fontWeight:"bold"}}>{clickCount}</span> / 10</Text></Box>
+          </Button> <Text pt="10px" color="#FFFFFF" fontSize={"14px"}>UI :- <span style={{color:"#FF0000", fontSize:"14px" , fontWeight:"bold"}}>{clickCount}</span> / {phoneBGs.length}</Text></Box>
       <Box w={{ base: "96%", md: "60%" }} m="auto" h="auto" ><Text textAlign={"left"} mt="20px" mb="20px" color="#fff" fontSize={{ base: "18px", md: "27px" }}>Kya wo sach tha- <span style={{ color: "#FF0000" }}>#heighway ka bhoot</span></Text></Box>
     </Box>
 
@@ -582,12 +584,17 @@ const AudioPlayer = () => {
         
       </Stack>
 
+
+
+
+
         {/* pagination ends here --------------------------------pagination ends here-----------------------------------------------------------pagination ends here- */}
 
 
+        
 
 
-
+       
 
 
     </>
