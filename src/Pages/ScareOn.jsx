@@ -140,7 +140,7 @@ function ScareOn() {
        <Box m="auto" w={{base:"95%",md:"95%"}} h="auto" 
       //  border="2px solid red"
        >
-        <Text textAlign={"left"} color="#F44336" fontFamily={"dogica-lite"}  fontSize={{base:"0.8rem",md:"1.4rem"}}>WELCOME TO HASHIMA ISLAND</Text>
+        <Text textAlign={"left"} color="#F44336" fontFamily={"dogica-lite"}  fontSize={{base:"0.8rem",md:"1.4rem"}}>Spooky saround clips...</Text>
         
         
         

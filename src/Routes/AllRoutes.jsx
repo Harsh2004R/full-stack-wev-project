@@ -17,6 +17,8 @@ import Videos from '../Pages/Videos';
 import Podcast from "../Pages/Podcast";
 import ScareOnAdmin from '../Pages/ScareOnAdmin';
 import DummyScareOnCard from '../Empty-3/DummyScareOnCard';
+import Media from '../Components/Media';
+import ValidEmail from '../Empty-3/ValidEmail';
 function AllRoutes() {
   return (
     <>
@@ -39,6 +41,8 @@ function AllRoutes() {
         <Route path="/podcast" element={<Podcast/>}></Route>
         <Route path="/scareon_admin" element={<ScareOnAdmin/>}></Route>
         <Route path="/dummy" element={<DummyScareOnCard/>}></Route>
+        <Route path="/media" element={<Media/>}></Route>
+        <Route path="/valid" element={<ValidEmail/>}></Route>
       </Routes>
     </>
   )
