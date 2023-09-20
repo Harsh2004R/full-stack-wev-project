@@ -1,4 +1,4 @@
-
+import React,{useState,useEffect} from 'react';
 import {
   Box,
   Flex,
@@ -16,7 +16,12 @@ import {
   FormLabel,
   FormControl,
   Divider,
-  keyframes
+  keyframes,
+  Image,
+  // Alert,
+  // AlertIcon,
+  // AlertTitle,
+  // CloseButton,
 
 } from '@chakra-ui/react';
 import Navbar2 from '../Components/Navbar2';
@@ -84,6 +89,54 @@ function Blur(props) {
 }
 
 export default function ScareOnAdmin() {
+  const [showImage, setShowImage] = useState(false);
+
+
+  const [userData, setUserData] = useState({
+    username: '',  
+    email: '',
+    location: '',
+    phone: '',
+    imageFiles: [],
+    audioFiles: [],
+    videoFiles: [],
+  });
+  
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setUserData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  
+
+ 
+
+  const handleFileChange = (e) => {
+    const { name, files } = e.target;
+    // Convert the FileList object to an array of files
+    const fileArray = Array.from(files);
+    setUserData((prevData) => ({
+      ...prevData,
+      [name]: fileArray, // Update with the array of files
+    }));
+     // Show the image when an image file is selected
+    if (name === 'imageFiles' && fileArray.length > 0) {
+      setShowImage(true);
+    } else {
+      setShowImage(false);
+    }
+  };
+
+  
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    console.log('User Data:', userData);
+
+    // You can send this data to your server for further processing if needed
+  };
+
   return (
 
 <>
@@ -104,7 +157,7 @@ export default function ScareOnAdmin() {
           _hover={{ 
            transform: 'scale(0.9)',
            cursor: 'pointer'
-         }}  pt={{base:"10px",md:"10px"}} pb={{base:"10px",md:"10px"}}  m="auto"  bg="#000000" fontFamily={"Hell"} color="#FFFFFF" textAlign={"center"} fontSize={{base:"6xl",md:"8xl"}}>"Scare On"</Text>
+         }}  pt={{base:"10px",md:"0px"}} pb={{base:"10px",md:"0px"}}  m="auto"  bg="#000000" fontFamily={"Hell"} color="#FFFFFF" textAlign={"center"} fontSize={{base:"6xl",md:"8xl"}}>"Scare On"</Text>
           <Divider w="100%" animation={`${slideInFromLeft} 2.2s ease-in-out infinite alternate`} borderColor={"#fff"}/>
           </Box>
 
@@ -119,6 +172,7 @@ export default function ScareOnAdmin() {
         spacing={{ base: 10, lg: 32 }}
         py={{ base: 10, sm: 20, lg: 32 }}
       >
+        
         <Stack spacing={{ base: 10, md: 20 }} >
           <Heading
             lineHeight={1.1}
@@ -192,7 +246,34 @@ export default function ScareOnAdmin() {
               ></Box>
               YOU
             </Flex>
+
+           
           </Stack>
+
+
+              {/* Text box starting here */}
+
+          <Box w="100%" h={{base:"150px",md:"200px"}} 
+          display={"flex"} justifyContent={"center"} alignItems={"center"}
+          boxShadow="0px 6px 8px rgba(0, 161, 187, 0.7)"
+          >
+
+
+            <Text fontWeight={"bold"} bgGradient="linear(to-r, white,#29B6F6)" bgClip="text" ml={{base:"12px",md:"22px"}} mr={{base:"12px",md:"22px"}} textAlign={"justify"} fontSize={{ base: 'sm', sm: 'md' }} >
+              We’re looking for amazing post just like others shared & Become a part of our
+              rockstar members as a team. Fill the details given below. If you want you can share img | mp3 | mp4 or just any one of them.
+            <span></span>
+            
+            
+            </Text>
+
+
+          </Box>
+
+
+                {/* Text box ending here */}
+
+          
         </Stack>
         <Stack
           bg={"#222221"}
@@ -212,81 +293,152 @@ export default function ScareOnAdmin() {
                 !
               </Text>
             </Heading>
-            <Text  fontSize={{ base: 'sm', sm: 'md' }} color="#fff">
-              We’re looking for amazing post just like others shared & Become a part of our
-              rockstar members as a team. Fill the details given below.
-            </Text>
+            <Text>test</Text>
           </Stack>
-          <Box as={'form'} mt={10}>
+          <form onSubmit={handleSubmit}>
+        
             <Stack spacing={4}>
               <Input
+              name="username"
                 placeholder="Firstname"
                 bg={'gray.100'}
-                border={0}
+                borderRadius={0}
                 color={'gray.500'}
                 _placeholder={{
                   color: 'gray.500',
                 }}
+                onChange={handleInputChange}
               />
               <Input
+              name="email"
                 placeholder="Example@gmail.com"
                 bg={'gray.100'}
-                border={0}
+                borderRadius={0}
                 color={'gray.500'}
                 _placeholder={{
                   color: 'gray.500',
                 }}
+                onChange={handleInputChange}
               />
               <Input
-                placeholder="+91 (___) __-___-___"
+              name="phone"
+                placeholder="Phone 'dont add +91' "
                 bg={'gray.100'}
-                border={0}
+                borderRadius={0}
                 color={'gray.500'}
                 _placeholder={{
                   color: 'gray.500',
                 }}
+                onChange={handleInputChange}
               />
 
             <Input
+            name="location"
               placeholder="Enter your location"
               bg="gray.100"
-              border={0}
+              borderRadius={0}
               color="gray.500"
               _placeholder={{
                 color: 'gray.500',
               }}
+              onChange={handleInputChange}
             />
             <FormControl>
-          <FormLabel bgGradient="linear(to-r, white,#FF0000)" bgClip="text">Upload Image</FormLabel>
+          <FormLabel bgGradient="linear(to-r, white,#FF0000)" bgClip="text">Upload Image or</FormLabel>
           <Input
+          name="imageFiles"
             type="file"
             accept="image/*"
             bg="gray.100"
-            border={0}
+            borderRadius={0}
             color="gray.500"
+            onChange={handleFileChange}
           />
+
+
+
+
+
+          {/* here i am displaying the selected image for better user experience commented bt harsh  */}
+              {showImage && (
+               <Box mt="10px"  w="100%" h="auto" > <Box border="0.5px solid #9E9E9E" ml={5} w={{base:"150px",md:"150px"}} h={{base:"200px",md:"150px"}}> {/*  width and height */}
+                <Image   width="100%" h="100%"
+                src={userData.imageFiles[0] ? URL.createObjectURL(userData.imageFiles[0]) : ''}
+                alt="Selected Image"
+                />
+              </Box></Box>
+)}
+
+
+
+
+
         </FormControl>
                <FormControl  bgGradient="linear(to-r, white,#FF0000)" bgClip="text">
-          <FormLabel>Upload Audio (mp3)</FormLabel>
+          <FormLabel>Upload Audio (mp3) or</FormLabel>
           <Input
+          name="audioFiles"
             type="file"
-            accept="audio/mp3"
+            accept="audio/mp3, audio/wav, audio/ogg, audio/m4a, audio/*"
             bg="gray.100"
-            border={0}
+            borderRadius={0}
             color="gray.500"
+            onChange={handleFileChange}
           />
         </FormControl>
 
+
+
+        {userData.audioFiles.length > 0 && (
+        <Box mt="10px" w="100%" h="auto">
+          
+        
+          <audio style={{ borderRadius: 'none',color:"#FF0000", width:'100%' ,height:'20px'}}controls>
+            <source src={URL.createObjectURL(userData.audioFiles[0])} type="audio/mp3" />
+              Your browser does not support the audio element.
+            </audio>
+          
+        </Box>
+        )}
+
+
+
+
+
+
         <FormControl  bgGradient="linear(to-r, white,#FF0000)" bgClip="text">
-          <FormLabel>Upload Video (mp4)</FormLabel>
+          <FormLabel>Upload Video (mp4) or</FormLabel>
           <Input
+          name="videoFiles"
             type="file"
             accept="video/mp4"
             bg="gray.100"
-            border={0}
+            borderRadius={0}
             color="gray.500"
+            onChange={handleFileChange}
           />
         </FormControl>
+
+
+
+        {userData.videoFiles.length > 0 && (
+          <Box mt="10px" w="100%" h="auto">
+          {/* Customize the width and height as needed */}
+          <Box   w={{ base: "250px", md: "250px" }} h={{ base: "150px", md: "150px" }}>
+            <video controls style={{width:"100%",height:"150px",margin:"auto"}} >
+             <source src={URL.createObjectURL(userData.videoFiles[0])} type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+          </Box>
+          </Box>
+        )}
+
+
+
+
+
+
+
 
 
             </Stack>
@@ -294,18 +446,23 @@ export default function ScareOnAdmin() {
               fontFamily={'heading'}
               mt={8}
               w={'full'}
+              borderRadius={"0px"}
               bg={`linear-gradient(to right, #FF0000, #000000, #FF0000)`}
               color={'white'}
               _hover={{bg:`linear-gradient(to right, #000000, #FF0000, #000000)`, boxShadow:'0 0 8px 5px #F5F5F5'}}
+              
+              type="submit"
             >
               Submit
             </Button>
-          </Box>
-          form
+          
+          </form>
+          
         </Stack>
       </Container>
       <Blur position={'absolute'} top={-10} left={-10} style={{ filter: 'blur(70px)' }} />
     </Box>
+
 
 
 
@@ -315,3 +472,7 @@ export default function ScareOnAdmin() {
     </>
   );
 }
+
+
+
+

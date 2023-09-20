@@ -8,10 +8,9 @@ import CustomAlert from "../Components/CustomAlert";
 import AI from '../Components/AI';
 import VideoComponent from '../Components/VideoComponent ';
 import Navbar2 from "../Components/Navbar2";
-import ScareOnClip from '../Components/ScareOnClip';
-import ScareOnCard from '../Components/ScareOnCard';
 import Footer from "../Components/Footer";
-
+import DummyScareOnClip from "../Empty-3/DummyScareOnClip";
+import DummyScareOnCard from "../Empty-3/DummyScareOnCard";
 
 
 
@@ -31,6 +30,11 @@ import Hashima from "../Photo/Hashima.png";
 import SideNavImg from "../Photo/SideNavImg.png";
 import MainNavImg from "../Photo/MainNavImg.png";
 import PhoneMenuimg from "../Photo/PhoneMenuimg.jpg";
+
+
+
+
+
 
 
 import P1 from "../Photo/P1.png";
@@ -670,14 +674,14 @@ useEffect(() => {
           // border="2px solid red"
         >
       <Box  pt={{base:"5%",md:"10%"}} w={{base:"100%",md:"60%"}} >
-  
-      <ScareOnClip  />
+        
+      <DummyScareOnClip/>
       </Box>
 
     {/* importing ScareonCard  component here----------------------------------------------------------------------------------------------------------------------------------------------------*/}
 
       <Box  pt={{base:"5%",md:"1%"}} display="flex" justifyContent={"center"}  alignItems={"center"} m="auto" w={{base:"90%",md:"40%"}}>
-        <ScareOnCard />
+        <DummyScareOnCard />
       </Box>
 
        {/* Ending Scare on audio player here --------------------------------------------------------------------------------------------------------------------------- */}
@@ -742,7 +746,7 @@ useEffect(() => {
           <Box
       w="100%"
       h={{base:"80vh",md:"130vh"}}
-      // border="1px solid lime"
+      border="1px solid lime"
       display="flex"
       alignItems="center"
       justifyContent="center"

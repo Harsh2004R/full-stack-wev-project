@@ -391,7 +391,6 @@ import {
 
 } from 'react-icons/fi';
 
-import VideoComponent from '../Components/VideoComponent ';
 
 import {
   Grid,
@@ -429,62 +428,8 @@ const LinkItems = [
 
 const SidebarContent = ({ onClose, ...rest }) => {
   // states
-  const [pokemonsTotal, setPokemonsTotal] = useState(undefined);
-  const [pokemons, setPokemons] = useState([]);
+
   const [sliderValue, setSliderValue] = useState(0);
-  // constants
-  const outerLimit = 1;
-  const innerLimit = 1;
-
-  const {
-    pages,
-    pagesCount,
-    offset,
-    currentPage,
-    setCurrentPage,
-    setIsDisabled,
-    isDisabled,
-    pageSize,
-    setPageSize
-  } = usePagination({
-    total: pokemonsTotal,
-    limits: {
-      outer: outerLimit,
-      inner: innerLimit
-    },
-    initialState: {
-      pageSize: 5,
-      isDisabled: false,
-      currentPage: 1
-    }
-  });
-
-  // effects
-  useEffect(() => {
-    fetchPokemons(pageSize, offset)
-      .then((pokemons) => {
-        setPokemonsTotal(pokemons.count);
-        setPokemons(pokemons.results);
-      })
-      .catch((error) => console.log("App =>", error));
-  }, [currentPage, pageSize, offset]);
-
-  // handlers
-  const handlePageChange = (nextPage) => {
-    // -> request new data using the page number
-    setCurrentPage(nextPage);
-    console.log("request new data with ->", nextPage);
-  };
-
-  const handlePageSizeChange = (event) => {
-    const pageSize = Number(event.target.value);
-
-    setPageSize(pageSize);
-  };
-
-  const handleDisableClick = () => {
-    setIsDisabled((oldState) => !oldState);
-  };
 
   const handleSliderChange = (newValue) => {
     setSliderValue(newValue);
@@ -549,154 +494,6 @@ const SidebarContent = ({ onClose, ...rest }) => {
     </Box>
 
 
-
-
-{/* pagination starts here -----------------------------------------agination starts here---------------------------------------------------------------------------agination starts here*/}
-
-
-    <Stack 
-    // border={"1px solid red"} 
-    mt="100px">
-        <Pagination
-          pagesCount={pagesCount}
-          currentPage={currentPage}
-          isDisabled={isDisabled}
-          onPageChange={handlePageChange}
-        >
-          <PaginationContainer
-            // border="1px solid red"
-            align="center"
-            justify="space-between"
-            p={1}
-            w="full"
-          >
-            <PaginationPrevious 
-            // border={"1px solid red"}
-            w={5}
-            h={5}
-              _hover={{
-                bg: "#6b947f"
-              }}
-              bg="#fff"
-              onClick={() =>
-                console.log(
-                  "Im executing my own function along with Previous component functionality"
-                )
-              }
-            >
-              <Text fontSize={{base:"12px",md:"13px"}}>Prev</Text>
-              {/* <FiArrowLeft fontSize={"lg"} /> */}
-            </PaginationPrevious>
-            <PaginationPageGroup 
-            // border={"1px solid red"}
-            
-              isInline
-              align="center"
-              separator={
-                <PaginationSeparator 
-                // border={"1px solid yellow"}
-                  onClick={() =>
-                    console.log(
-                      "Im executing my own function along with Separator component functionality"
-                    )
-                  }
-                  bg="blue.300"
-                  fontSize="sm"
-                  w={5}
-                  h={5}
-                  jumpSize={3}
-                />
-              }
-            >
-              {pages.map((page) => (
-                <PaginationPage
-                //  border={"1px solid red"}
-                  w={5}
-                  h={5}
-                  bg="#FFFFFF"
-                  key={`pagination_page_${page}`}
-                  page={page}
-                  onClick={() =>
-                    console.log(
-                      "Im executing my own function along with Page component functionality"
-                    )
-                  }
-                  fontSize="11px"
-                  _hover={{
-                    bg: "#4fc3f7"
-                  }}
-                  _current={{
-                    bg: "#6b947f",
-                    textColor : "#FFFFFF",
-                    fontSize: "sm",
-                    w: 6
-                  }}
-                />
-              ))}
-            </PaginationPageGroup>
-            <PaginationNext
-            w={5}
-            h={5}
-              _hover={{
-                bg: "#6b947f",
-                textColor : "#fff"
-              }}
-                bg="#fff"
-              onClick={() =>
-                console.log(
-                  "Im executing my own function along with Next component functionality"
-                )
-              }
-            >
-              <Text fontSize={{base:"12px",md:"13px"}}>Next</Text>
-              {/* <FiArrowRight  fontSize={"lg"}/> */}
-            </PaginationNext>
-          </PaginationContainer>
-        </Pagination>
-        <Center m="auto" w="full">
-          <Button
-            w="50%"
-            m="5px"
-            _hover={{
-              bg: "#abb8c3",
-              border : "0.5px solid #6b947f",
-              textColor : "#000000"
-            }}
-            bg="#6b947f"
-            textColor={"#FFFFFF"}
-            border="0.5px solid #FFFFFF"
-            onClick={handleDisableClick}
-            fontSize={{base:"14px",md:"12px"}}
-          >
-            Disable ON/OFF
-          </Button>
-          <Select m="5px" border={"0.5px solid #6b947f"} variant={"unstyled"} w="50%" ml={3}  color="#abb8c3" onChange={handlePageSizeChange} >
-            <option value="10" variant={"unstyled"} >10</option>
-            <option value="25"  variant={"unstyled"}>25</option>
-            <option value="50">50</option>
-          </Select>
-        </Center>
-        {/* <Grid
-          gap={3}
-          mt={20}
-          px={20}
-          templateColumns="repeat(5, 1fr)"
-          templateRows="repeat(2, 1fr)"
-        >
-
-
-          {pokemons?.map(({ name }) => (
-            <Center key={name} bg="green.100" p={4}>
-              <Text>{name}</Text>
-            </Center>
-          ))}
-
-
-
-        </Grid> */}
-      </Stack>
-
-            {/* pagination ends here --------------------------------pagination ends here-----------------------------------------------------------pagination ends here- */}
 
 
     </Box>
@@ -831,7 +628,67 @@ const MobileNav = ({ onOpen, ...rest }) => {
 
 const Videos = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [pokemonsTotal, setPokemonsTotal] = useState(undefined);
+  const [pokemons, setPokemons] = useState([]);
 
+
+
+
+
+    // constants
+    const outerLimit = 1;
+    const innerLimit = 1;
+  
+    const {
+      pages,
+      pagesCount,
+      offset,
+      currentPage,
+      setCurrentPage,
+      setIsDisabled,
+      isDisabled,
+      pageSize,
+      setPageSize
+    } = usePagination({
+      total: pokemonsTotal,
+      limits: {
+        outer: outerLimit,
+        inner: innerLimit
+      },
+      initialState: {
+        pageSize: 5,
+        isDisabled: false,
+        currentPage: 1
+      }
+    });
+  
+    // effects
+    useEffect(() => {
+      fetchPokemons(pageSize, offset)
+        .then((pokemons) => {
+          setPokemonsTotal(pokemons.count);
+          setPokemons(pokemons.results);
+        })
+        .catch((error) => console.log("App =>", error));
+    }, [currentPage, pageSize, offset]);
+  
+    // handlers
+    const handlePageChange = (nextPage) => {
+      // -> request new data using the page number
+      setCurrentPage(nextPage);
+      console.log("request new data with ->", nextPage);
+    };
+  
+    const handlePageSizeChange = (event) => {
+      const pageSize = Number(event.target.value);
+  
+      setPageSize(pageSize);
+    };
+  
+    const handleDisableClick = () => {
+      setIsDisabled((oldState) => !oldState);
+    };
+  
   return (
 
 
@@ -871,9 +728,167 @@ const Videos = () => {
 
 
          
-          <VideoComponent/>
-          <VideoComponent/>
-          <VideoComponent/>
+         
+
+
+          {pokemons?.map(({ name, url }) => (
+  <Box pb={{ base: "10px", md: "20px" }} display="flex" mt={{ base: "10px", md: "20px" }} flexDirection={{ base: "column", md: "row" }} justifyContent={"space-evenly"} w="100%" h={{ base: "45vh", md: "auto" }} key={name}>
+    <Box border="2px solid red" mt={{ base: "10px", md: "20px" }} w={{ base: "100%", md: "50%" }} borderRadius={"8px"} h={{ base: "30vh", md: "48vh" }}>
+      <iframe
+        width={"100%"}
+        height="100%"
+        borderRadius="18px"
+        // src={url}
+        frameBorder="0"
+        allowFullScreen
+        title={name}
+      ></iframe>
+    </Box>
+    <Box w={{ base: "100%", md: "40%" }} color="#FFFFFF">
+      <Text fontFamily={"my"} fontSize={{ base: "16px", md: "35px" }}>{name}</Text>
+      <Divider />
+    </Box>
+  </Box>
+))}
+
+
+
+          
+{/* pagination starts here -----------------------------------------agination starts here---------------------------------------------------------------------------agination starts here*/}
+
+
+<Stack 
+    // border={"1px solid red"} 
+    w={{base:"78%",md:"20%"}}
+    m="auto"
+    mt="100px">
+        <Pagination
+          pagesCount={pagesCount}
+          currentPage={currentPage}
+          isDisabled={isDisabled}
+          onPageChange={handlePageChange}
+        >
+          <PaginationContainer
+            // border="1px solid red"
+            align="center"
+            justify="space-between"
+            p={1}
+            w="full"
+          >
+            <PaginationPrevious 
+            // border={"1px solid red"}
+            w={5}
+            h={5}
+              _hover={{
+                bg: "#6b947f"
+              }}
+              bg="#fff"
+              onClick={() =>
+                console.log(
+                  "Im executing my own function along with Previous component functionality"
+                )
+              }
+            >
+              <Text fontSize={{base:"12px",md:"13px"}}>Prev</Text>
+            </PaginationPrevious>
+            <PaginationPageGroup 
+            // border={"1px solid red"}
+            
+              isInline
+              align="center"
+              separator={
+                <PaginationSeparator 
+                // border={"1px solid yellow"}
+                  onClick={() =>
+                    console.log(
+                      "Im executing my own function along with Separator component functionality"
+                    )
+                  }
+                  bg="blue.300"
+                  fontSize="sm"
+                  w={5}
+                  h={5}
+                  jumpSize={3}
+                />
+              }
+            >
+              {pages.map((page) => (
+                <PaginationPage
+                //  border={"1px solid red"}
+                  w={5}
+                  h={5}
+                  bg="#FFFFFF"
+                  key={`pagination_page_${page}`}
+                  page={page}
+                  onClick={() =>
+                    console.log(
+                      "Im executing my own function along with Page component functionality"
+                    )
+                  }
+                  fontSize="11px"
+                  _hover={{
+                    bg: "#4fc3f7"
+                  }}
+                  _current={{
+                    bg: "#6b947f",
+                    textColor : "#FFFFFF",
+                    fontSize: "sm",
+                    w: 6
+                  }}
+                />
+              ))}
+            </PaginationPageGroup>
+            <PaginationNext
+            w={5}
+            h={5}
+              _hover={{
+                bg: "#6b947f",
+                textColor : "#fff"
+              }}
+                bg="#fff"
+              onClick={() =>
+                console.log(
+                  "Im executing my own function along with Next component functionality"
+                )
+              }
+            >
+              <Text fontSize={{base:"12px",md:"13px"}}>Next</Text>
+            </PaginationNext>
+          </PaginationContainer>
+        </Pagination>
+        <Center m="auto" w="full">
+          <Button
+            w="50%"
+            m="5px"
+            _hover={{
+              bg: "#E0E0E0",
+              border : "0.5px solid #6b947f",
+              textColor : "#E91E63"
+            }}
+            bg="transparent"
+            textColor={"#03A9F4"}
+            border="0.5px solid #37474F"
+            onClick={handleDisableClick}
+            fontSize={{base:"14px",md:"12px"}}
+          >
+            Disable ON/OFF
+          </Button>
+          <Select m="5px" border={"0.5px solid #6b947f"} variant={"unstyled"} w="50%" ml={3}  color="#abb8c3" onChange={handlePageSizeChange} >
+            <option value="10" variant={"unstyled"} >10</option>
+            <option value="25"  variant={"unstyled"}>25</option>
+            <option value="50">50</option>
+          </Select>
+        </Center>
+        
+      </Stack>
+
+
+
+
+
+        {/* pagination ends here --------------------------------pagination ends here-----------------------------------------------------------pagination ends here- */}
+
+
 
 
 

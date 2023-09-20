@@ -3,7 +3,7 @@ import {Box,Button,Text,Flex,Grid,Image,keyframes,Divider } from '@chakra-ui/rea
 import { Navigate, useNavigate } from 'react-router-dom';
 import NavBar from "../Components/Navbar";
 import Navbar2 from "../Components/Navbar2";
-import ArticleList from '../Empty-2/ArticleList';
+import ArticleList from "../Components/ArticleList";
 import DWbg1 from "../Photo/DWbg1.webp";
 import DWbg2 from "../Photo/DWbg2.webp";
 import CustomAlert2 from '../Components/CustomAlert2';
