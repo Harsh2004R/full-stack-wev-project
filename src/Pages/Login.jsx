@@ -102,12 +102,13 @@ function Login() {
             p="2rem" 
             textAlign="center"
             zIndex={1}
+            
           >
             <Text
               fontFamily="another_danger"
               textStyle="horror"
               color="white"
-              fontSize={{ base: "5rem", md: "6rem" }}
+              fontSize={{ base: "4rem", md: "5rem" }}
               m="auto"
             >
               Login
@@ -116,14 +117,14 @@ function Login() {
           <Box border="none" maxWidth="25rem" p="2.8125rem" borderWidth={1} borderRadius={8} boxShadow="lg" bgColor="transparent"> {/* Converted to rem */}
             <form onSubmit={handleSubmit}>
               <FormControl p="0.625rem" mb="1.25rem"> 
-                <FormLabel htmlFor="email" color="white" textAlign="center" pb="0.625rem">
-                  <Text fontFamily="another_danger">Email address</Text>
-                </FormLabel>
+               
+                  <Text fontFamily= "caslon-antique" color="#fff" fontSize={{base:"18px",md:"25px"}} textAlign="center" pb="0.625rem">Email address</Text>
+                
                 <Input
-                  color="#fff"
+                  color="#FF6F00"
                   pt="0.625rem" 
                   variant="unstyled"
-                  placeholder="Demons Email"
+                  placeholder="Your valid Email"
                   placeholderTextColor="#ECEFF1"
                   textAlign="center"
                   bg="none"
@@ -135,15 +136,15 @@ function Login() {
                 />
               </FormControl>
               <FormControl p="0.625rem">
-                <FormLabel textAlign="center" htmlFor="password" color="white" pb="0.625rem"> 
-                  <Text fontFamily="another_danger">Password</Text>
-                </FormLabel>
+                
+                  <Text fontFamily= "caslon-antique" color="#fff" fontSize={{base:"18px",md:"25px"}} textAlign="center" pb="0.625rem">Password</Text>
+                
                 <Input
-                  color="white"
+                  color="FF6F00"
                   border="none"
                   pt="0.625rem" 
                   variant="unstyled"
-                  placeholder="Dare to fill your password"
+                  placeholder="Your password"
                   placeholderTextColor="#ECEFF1"
                   textAlign="center"
                   bg="none"
@@ -160,9 +161,9 @@ function Login() {
                   animation={`${glowAnimation} 1s infinite`}
                   _focus={{ outline: 'none' }}
                   _active={{ transform: 'scale(1.5)' }}
-                  display="flex" alignItems="center" m="auto" type="submit" bgColor="transparent" borderRadius="md" w="50%" // Converted to rem
+                  display="flex" alignItems="center" m="auto" fontSize={{base:"18px",md:"25px"}} type="submit" bgColor="transparent" borderRadius="md" w={{base:"100px",md:"120px"}} // Converted to rem
                 >
-                  <Text fontFamily="another_danger" color="#FF7043">Enter!</Text>
+                  <Text fontFamily="caslon-antique" color="#FF7043">Enter !</Text>
                 </Button>
               </Box>
             </form>

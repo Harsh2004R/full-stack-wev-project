@@ -1,6 +1,6 @@
 import React, { useEffect, useRef,useState } from 'react';
 import { Box, Input, Text, Button,keyframes, FormControl, FormLabel,Center, AlertDialog,AlertDialogOverlay,AlertDialogContent,Image,CloseButton,AlertDialogFooter,AlertDialogBody} from '@chakra-ui/react';
-import LoginBG3 from '../Photo/LoginBG3.jpg';
+
 import "../Fonts.css"
 import '../App.css';
 import backgroundVideo from '../Videos/BGvideo.mp4'; // Replace with the actual path to your video file
@@ -86,7 +86,7 @@ function SignUp() {
             fontFamily="another_danger"
             textStyle="horror"
             color="white"
-            fontSize="80px"
+            fontSize={{base:"67px",md:"65px"}}
             m="auto"
           >
             Sign Up
@@ -95,7 +95,8 @@ function SignUp() {
         <Box
 
           border="1px dashed #78909C"
-          maxWidth={'400px'}
+          // maxWidth={'400px'}
+          w={{base:"80%",md:"25%"}}
           p={{base:"45",md:"5"}}
           borderWidth={1}
           borderRadius={8}
@@ -106,41 +107,34 @@ function SignUp() {
         >
           <form onSubmit={handleSignin} >
             <Box p={0} mb="5">
-              <FormLabel htmlFor="email" color="white" 
-              textAlign="center" 
-              pb={0}>
-                <Text fontFamily= "another_danger" textStyle="horror">Phone Number</Text>
-              </FormLabel>
+              
+                <Text textAlign={"center"} color="#fff"  fontFamily= "caslon-antique"  fontSize={{base:"18px",md:"25px"}} textStyle="horror">Phone Number</Text>
+              
               <Input
                 onClick={stopPropagation}
-                color="#fff"
-                // pt="10px"
+                color="#FF6F00"
                 variant="unstyled"
                 placeholder="Enter Phone Number"
-                placeholderTextColor="#ECEFF1"
                 textAlign="center"
-                // fontFamily= "another_danger"
+                fontFamily= "caslon-antique"
                 bg="none"
                 mx="auto"
-                type="text"
+                type="number"
                 border="none"
               />
             </Box>
             <Box p={0} mb="5">
-              <FormLabel htmlFor="email" color="white" 
-              textAlign="center" 
-              pb={0}>
-                <Text fontFamily= "another_danger" textStyle="horror">Email address</Text>
-              </FormLabel>
+              
+                <Text fontFamily= "caslon-antique" textAlign={"center"} color="#fff" fontSize={{base:"18px",md:"25px"}} textStyle="horror">Email address</Text>
+             
               <Input
                 onClick={stopPropagation}
-                color="#fff"
-                // pt="10px"
+                color="#FF6F00"
                 variant="unstyled"
                 placeholder="Enter your Email"
                 placeholderTextColor="#ECEFF1"
                 textAlign="center"
-                // fontFamily= "another_danger"
+                fontFamily= "caslon-antique"
                 bg="none"
                 mx="auto"
                 type="text"
@@ -148,20 +142,17 @@ function SignUp() {
               />
             </Box>
             <Box p={0} mb="5">
-              <FormLabel htmlFor="username" color="white"
-               textAlign="center" 
-               pb={0}>
-                <Text fontFamily= "another_danger" textStyle="horror">Username</Text>
-              </FormLabel>
+              
+                <Text fontFamily= "caslon-antique" textAlign={"center"} color="#fff" fontSize={{base:"18px",md:"25px"}} textStyle="horror">Username</Text>
+             
               <Input
                 onClick={stopPropagation}
-                color="#fff"
-                // pt="10px"
+                color="#FF6F00"
                 variant="unstyled"
                 placeholder="Enter your Username"
                 placeholderTextColor="#ECEFF1"
                 textAlign="center"
-                // fontFamily= "another_danger"
+                fontFamily= "caslon-antique"
                 bg="none"
                 mx="auto"
                 type="text"
@@ -169,20 +160,17 @@ function SignUp() {
               />
             </Box>
             <Box p={0}>
-              <FormLabel 
-              textAlign="center"
-               htmlFor="password" color="white" pb={0}>
-               <Text fontFamily= "another_danger" textStyle="horror">Password</Text>
-              </FormLabel>
+             
+               <Text fontFamily= "caslon-antique" textAlign={"center"} color="#fff" fontSize={{base:"18px",md:"25px"}} textStyle="horror">Password</Text>
+              
               <Input
-                onClick={stopPropagation}
-                color="white"
+                onClick={stopPropagation} 
+                color="#FF6F00"
                 border="none"
-                // pt="10px"
                 variant="unstyled"
                 placeholder="Dare to create your password"
                 placeholderTextColor="#ECEFF1"
-                // fontFamily= "another_danger"
+                fontFamily= "caslon-antique"
                 textAlign="center"
                 bg="none"
                 mx="auto"
@@ -193,9 +181,11 @@ function SignUp() {
             _hover={{ boxShadow: '0 0 10px 5px coral' }}
             animation={`${glowAnimation} 2s infinite`}
             _focus={{ outline: 'none' }}
-            _active={{ transform: 'scale(1.5)' }}
-             type="submit" display={"flex"} alignItems={"center"} onClick={handleSignin} bgColor="transparent"  borderRadius="md" w="50%" mx="auto" mt={4}>
-            <Text color="#FF7043"  fontFamily= "another_danger">Welcome</Text>
+            _active={{ transform: 'scale(1.3)' }}
+            w={{base:"120px",md:"150px"}}
+            h={{base:"35px",md:"40px"}}
+             type="submit" display={"flex"} alignItems={"center"} onClick={handleSignin} bgColor="transparent"  borderRadius="md"  mx="auto" mt={4}>
+            <Text color="#FF7043"  fontFamily= "caslon-antique">Welcome</Text>
             </Button>
           </form>
         </Box>

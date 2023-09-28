@@ -138,13 +138,19 @@ import {
   Center,
 } from '@chakra-ui/react';
 
+import { useNavigate } from 'react-router-dom';
+
 function ValidEmail() {
   const [email, setEmail] = useState('');
   const [result, setResult] = useState({ message: '', data: null });
 
+
+  const Navigate = useNavigate();
+
+
   const checkEmailValidity = async () => {
     try {
-      // Your Abstract API key
+      // Abstract API key
       const apiKey = '39ccf8a027da49c4a864da06caf0d4ec';
       // Make a GET request to the Abstract API
       const response = await fetch(
@@ -166,6 +172,10 @@ function ValidEmail() {
   // Determine if the "Sign Up" button should be enabled
   const isButtonEnabled =
     email !== '' && result.message === `Email ${email} exists`;
+
+  const handleSignUpPage = ()=>{
+    Navigate("/signup")
+  }
 
   return (
     <>
@@ -235,7 +245,9 @@ function ValidEmail() {
                   mt="20px" mb="20px"
                   w="120px" h="40px"
                   colorScheme="teal"
-                  isDisabled={!isButtonEnabled} // Enable the button if it should be
+                  isDisabled={!isButtonEnabled}
+                  onClick={handleSignUpPage}
+                  // Enable the button if it should be
                 >
                   Sign Up
                 </Button>

@@ -1,9 +1,10 @@
 
 import React, { useEffect, useState } from 'react';
-import { Box ,Text,Image,Button,Flex,keyframes,UnorderedList, ListItem,useBreakpointValue  } from "@chakra-ui/react";
+import { Box ,Text,Image,Button,Flex,keyframes,UnorderedList, ListItem,useBreakpointValue, Grid ,GridItem } from "@chakra-ui/react";
 import {  useNavigate } from 'react-router-dom';
 import {Divider} from "@chakra-ui/react"
 import Navbar from "../Components/Navbar";
+import TestNav from "../Empty-3/TestNav";
 import CustomAlert from "../Components/CustomAlert";
 import AI from '../Components/AI';
 import VideoComponent from '../Components/VideoComponent ';
@@ -23,10 +24,21 @@ import DummyScareOnCard from "../Empty-3/DummyScareOnCard";
 
 import AudioPlayerIMG from "../Photo/AudioPlayerIMG.png";
 import Mid2 from "../Photo/Mid2.avif";
-import HashimaBG from "../Photo/HashimaBG.jpg";
+import HauntedBG from "../Photo/HauntedBG.jpg";
 import Hashima from "../Photo/Hashima.png";
+import Hacker from "../Photo/Hacker.jpg";
+import HauntedHouse from "../Photo/HauntedHouse.jpg";
+import GirlHacker from "../Photo/GirlHacker.jpg";
+import SkullImg from "../Photo/SkullImg.jpg";
 
 
+
+
+
+
+
+
+ 
 import SideNavImg from "../Photo/SideNavImg.png";
 import MainNavImg from "../Photo/MainNavImg.png";
 import PhoneMenuimg from "../Photo/PhoneMenuimg.jpg";
@@ -95,6 +107,19 @@ const bounceAnimation = keyframes`
     transform: translateY(+20px);
   }
   40%, 60% {
+    transform: translateY(-10px);
+  }
+`;
+
+
+const textMiniBounce = keyframes`
+  0%, 50% 100%{
+    transform: translateY(0);
+  }
+  20%, 30%, 50% {
+    transform: translateY(+15px);
+  }
+  10%, 40% {
     transform: translateY(-10px);
   }
 `;
@@ -180,7 +205,7 @@ function Home() {
   };
 
 
-// slider Part starting from here.------------------------->>>
+// slider Part starting from here. ------------------------- slider Part starting from here. ------------------------- slider Part starting from here. ------------------------- slider Part starting from here. ------------------------- slider Part starting from here. ------------------------->>>
 
 
 useEffect(() => {
@@ -218,7 +243,9 @@ useEffect(() => {
     Navigate("/3D")
   }
 
-
+  const handleDW = ()=>{
+    Navigate("/darkweb")
+  }
 
   return (
     <>
@@ -229,7 +256,8 @@ useEffect(() => {
 
 
 
-      <Navbar />
+      {/* <Navbar /> */}
+      <TestNav/>
       <Navbar2 />
 
 
@@ -567,7 +595,7 @@ useEffect(() => {
            borderRadius={"none"}
             onClick={handleVideoPage}
 
-           >More Story</Button> 
+           >Watch More</Button> 
           
          </Box>
 
@@ -647,7 +675,7 @@ useEffect(() => {
            _active={{ transform: 'scale(1.5)' }}
            borderRadius={"none"}
            onClick={handlePodcastPage}
-           >More Story</Button> 
+           >Pod's here</Button> 
          </Box>
 
 
@@ -706,7 +734,7 @@ useEffect(() => {
            _active={{ transform: 'scale(1.5)' }}
            borderRadius={"none"}
            onClick={handleScareOnPage}
-           >More Story</Button> 
+           >View Post</Button> 
          </Box>
 
 
@@ -731,10 +759,10 @@ useEffect(() => {
 
 
        <Box w="100%"
-      h={{base:"90vh",md:"140vh"}}
+      h={{base:"80vh",md:"140vh"}}
       m="auto"
       // border="1px solid cyan"
-      backgroundImage={`url(${HashimaBG})`}
+      backgroundImage={`url(${HauntedBG})`}
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
@@ -746,7 +774,7 @@ useEffect(() => {
           <Box
       w="100%"
       h={{base:"80vh",md:"130vh"}}
-      border="1px solid lime"
+      // border="1px solid lime"
       display="flex"
       alignItems="center"
       justifyContent="center"
@@ -854,7 +882,7 @@ useEffect(() => {
           display={"flex"} justifyContent={"center"} alignItems={"center"}> 
          <Button 
          color="#FFFFFF"
-         w={{base:"160px",md:"180px"}}
+         w={{base:"120px",md:"150px"}}
          h={{base:"30px",md:"40px"}}
          bg={`linear-gradient(to right, #FF0000, #000000, #FF0000)`}
           fontSize={{base:"xs",md:"lg"}} 
@@ -871,22 +899,157 @@ useEffect(() => {
          </Box>
 
        </Box>
-        
-
-
-       {/* content ends here*/}
-
-
-
+      
+       {/* scroll content ends here*/}
+      </Box>
+      </Box>
       </Box>
 
-     
-    </Box>
 
 
 
 
-       </Box>
+
+
+
+
+
+
+
+        {/* Introducing Dark || Deep web Page || section here --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */}
+
+
+
+
+
+
+
+
+      <Box w="100%" h="auto" bg="#000000">
+
+        <Box w="100%" h="auto" bg="#000000">
+
+        <Divider  animation={`${slideInFromLeft} 3.5s ease-in-out infinite alternate`} w="100%" borderColor={"#fff"}/>
+          <Text transition="transform 1s" 
+          _hover={{ 
+           transform: 'scale(0.9)',
+           cursor: 'pointer'
+         }}  pt={{base:"20px",md:"20px"}} pb={{base:"20px",md:"20px"}}  m="auto" bg={gradient2} fontFamily={"Hell"} color="#FF0000" textAlign={"center"} fontSize={{base:"25px",md:"6xl"}}>"Explore Deep Dark web"</Text>
+          <Divider w="100%" animation={`${slideInFromLeft} 2.2s ease-in-out infinite alternate`} borderColor={"#fff"}/>
+
+        </Box>
+
+
+        <Box w={{base:"96%",md:"90%"}} h="auto"  m={{base:"auto",md:"auto"}}>
+
+          <Text
+          color="#fff"
+          textAlign={"left"}
+          fontFamily={"just-die-already"} fontSize={{base:"12px",md:"25px"}}
+          mt="10px" mb="10px"
+          >
+            Welcome to the Dark Web Section :
+          </Text>
+          
+          <Text
+          color="#B0BEC5"
+          textAlign={"justify"}
+          fontFamily={"dogica-lite"} fontSize={{base:"0.5rem",md:"0.8rem"}}
+          >Explore the hidden realms of the internet with our Dark Web Section. This unique and mysterious corner of our website allows you to glimpse into the enigmatic world of the dark web, where anonymity reigns and secrets lurk in the shadows.</Text>
+
+          <Text
+          color="#fff"
+          textAlign={"left"}
+          fontFamily={"just-die-already"} fontSize={{base:"12px",md:"25px"}}
+          mt="10px" mb="10px"
+          >
+            Stay Curious, Stay Safe :
+          </Text>
+
+          <Text 
+          color="#B0BEC5"
+          textAlign={"justify"}
+          fontFamily={"dogica-lite"} fontSize={{base:"0.5rem",md:"0.8rem"}}
+          >While you explore, remember that the dark web can be a mysterious and unpredictable place. Our Dark Web Section provides a curated experience, offering you a glimpse without the risks associated with uncharted territories.</Text>
+
+          <Text
+          color="#fff"
+          textAlign={"left"}
+          fontFamily={"just-die-already"} fontSize={{base:"12px",md:"25px"}}
+          mt="10px" mb="10px"
+          >
+            Dive In :
+          </Text>
+
+          <Text 
+          color="#B0BEC5"
+          textAlign={"justify"}
+          fontFamily={"dogica-lite"} fontSize={{base:"0.5rem",md:"0.8rem"}}
+          >Ready to embark on a journey through the hidden depths of the internet? Click below to enter the Dark Web Section and satisfy your curiosity.</Text>
+
+          <Text 
+          textDecoration={"underline"}
+           color="blue.400" 
+           textAlign={"left"} 
+           fontFamily={"dogica-lite"} 
+           fontSize={{base:"0.5rem",md:"0.8rem"}}
+           mt="10px"
+           mb="10px"
+           _hover={{cursor:"pointer", color:"red.400"}}
+            onClick={handleDW}
+           >
+            Enter the Dark Web :-
+            </Text>
+
+          <Box p={{base:"0",md:"5"}}>
+            <Grid templateColumns={{base:'repeat(2, 2fr)',md:'repeat(4, 1fr)'}} gap={{base:"5",md:"5"}}>
+            <GridItem _hover={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)' }} w='100%' h={{base:"150px",md:"220px"}}>
+              <Image src={Hacker} alt='Image 1'  w="100%" h="100%"/>
+            </GridItem>
+            <GridItem _hover={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)' }} w='100%' h={{base:"150px",md:"220px"}}>
+                <Image src={HauntedHouse} alt='Image 2'  w="100%" h="100%"/>
+            </GridItem>
+            <GridItem _hover={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)' }} w='100%' h={{base:"150px",md:"220px"}}>
+                <Image src={GirlHacker} alt='Image 3'  w="100%" h="100%"/>
+            </GridItem>
+            <GridItem _hover={{ boxShadow: '0 0 10px rgba(255, 255, 255, 0.5)' }} w='100%' h={{base:"150px",md:"220px"}}>
+              <Image src={SkullImg} alt='Image 4'  w="100%" h="100%"/>
+            </GridItem>
+            </Grid>
+
+
+            <Box 
+          bgColor={"#000000"}
+          // border="2px solid red" 
+          display={"flex"} justifyContent={"center"} alignItems={"center"}> 
+         <Button 
+         color="#FFFFFF"
+         w={{base:"120px",md:"150px"}}
+         h={{base:"30px",md:"40px"}}
+         bg={`linear-gradient(to right, #FF0000, #000000, #FF0000)`}
+          fontSize={{base:"xs",md:"lg"}} 
+          fontFamily={"just-die-already"} 
+          mb={{base:"30px",md:"50px"}}
+           mt={{base:"30px",md:"50px"}}
+           _hover={{bg:`linear-gradient(to right, #000000, #FF0000, #000000)`, boxShadow:'0 0 8px 5px #F5F5F5'}}
+           _focus={{ outline: 'none' }}
+           boxShadow='0 0 8px 5px #90A4AE'
+           _active={{ transform: 'scale(1.5)' }}
+           borderRadius={"none"}
+           onClick={handleDW}
+           >Visit</Button> 
+         </Box>
+          </Box>
+        </Box>
+      </Box>
+
+          {/* Ending Dark || Deep web Page || section here ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/}
+
+
+
+
+
+
 
 
 

@@ -126,6 +126,11 @@
     src:
      url('./Fonts/quantify/Quantify.ttf') format('truetype');
   }
+  @font-face {
+    font-family: 'Susp';
+    src:
+     url('./Fonts/Susp/OpenSans-Regular.ttf') format('truetype');
+  }
 
 
   /* Used Fonts */
