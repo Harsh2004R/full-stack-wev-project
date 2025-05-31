@@ -19,11 +19,14 @@ import ScareOnAdmin from '../Pages/ScareOnAdmin';
 import DummyScareOnCard from '../Empty-3/DummyScareOnCard';
 import Media from '../Components/Media';
 import ValidEmail from '../Empty-3/ValidEmail';
+import VideoComponent from '../Components/VideoComponent ';
+// import PaymentForm from "../Pages/PaymentForm";
 function AllRoutes() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
+      <Route path="/" element={<Home/>}></Route>
+      <Route path="/VideoComponent" element={<VideoComponent/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/signUp" element={<SignUp/>}></Route>
         <Route path="/welcome" element={<Welcome/>}></Route>
@@ -43,6 +46,7 @@ function AllRoutes() {
         <Route path="/dummy" element={<DummyScareOnCard/>}></Route>
         <Route path="/media" element={<Media/>}></Route>
         <Route path="/valid" element={<ValidEmail/>}></Route>
+        {/* <Route path="/payment" element={<PaymentForm/>}></Route> */}
       </Routes>
     </>
   )

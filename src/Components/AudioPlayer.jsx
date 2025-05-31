@@ -441,9 +441,10 @@ const AudioPlayer = () => {
 
 
           {pokemons?.map(({ name }) => (
-            <Text textAlign={"left"} key={name} color="#fff" p={4}>
-              #Epi-<span  style={{ color: "#FF0000" }} textAlign={"left"}>{name}</span><Divider/>
-            </Text>
+            
+            <Box p={2} border={"0.5px solid #fff"} rounded={"lg"}><Text textAlign={"left"} key={name} color="#fff" p={3} textDecoration={"underline"}>
+            #Epi-<span  style={{ color: "#FF0000" }} textAlign={"left"}>{name}</span>
+          </Text></Box>
           ))}
 
 
