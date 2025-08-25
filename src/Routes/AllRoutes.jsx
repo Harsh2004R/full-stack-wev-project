@@ -46,7 +46,7 @@ function AllRoutes() {
         <Route path="/dummy" element={<DummyScareOnCard/>}></Route>
         <Route path="/media" element={<Media/>}></Route>
         <Route path="/valid" element={<ValidEmail/>}></Route>
-        {/* <Route path="/payment" element={<PaymentForm/>}></Route> */}
+        <Route path="/hola" element={<PaymentForm/>}></Route>
       </Routes>
     </>
   )
